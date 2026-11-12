@@ -1,0 +1,60 @@
+# CRS-specific environment only. Supported placeholders are {model},
+# {llm_host}, and {repo_root}. Every selected CRS is expanded for every model.
+crses:
+  discver:
+    additional_env:
+      DISCVER_LLM_MODEL: "{model}"
+      DISCVER_LLM_URL: "{llm_host}/v1"
+      FUZZ_TIMEOUT: "7000"
+      LIBCRS_PATH: "{repo_root}/oss-crs/libCRS"
+      BUILDX_BAKE_ENTITLEMENTS_FS: "0"
+
+  crs-bug-finding-claude-code:
+    additional_env:
+      ANTHROPIC_MODEL: "{model}"
+      CRS_AGENT: claude_code
+
+  crs-bug-finding-codex:
+    additional_env:
+      CODEX_MODEL: "{model}"
+      CRS_AGENT: codex
+
+  crs-bug-finding-copilot-cli:
+    additional_env:
+      COPILOT_MODEL: "{model}"
+      CRS_AGENT: copilot_cli
+
+  crs-bug-finding-gemini-cli:
+    additional_env:
+      GEMINI_MODEL: "{model}"
+      CRS_AGENT: gemini_cli
+
+  crs-bug-finding-opencode:
+    additional_env:
+      OPENCODE_MODEL: "{model}"
+      CRS_AGENT: opencode
+
+  crs-claude-code:
+    additional_env:
+      ANTHROPIC_MODEL: "{model}"
+      CRS_AGENT: claude_code
+
+  crs-codex:
+    additional_env:
+      CODEX_MODEL: "{model}"
+      CRS_AGENT: codex
+
+  crs-copilot-cli:
+    additional_env:
+      COPILOT_MODEL: "{model}"
+      CRS_AGENT: copilot_cli
+
+  crs-gemini-cli:
+    additional_env:
+      GEMINI_MODEL: "{model}"
+      CRS_AGENT: gemini_cli
+
+  crs-opencode:
+    additional_env:
+      OPENCODE_MODEL: "{model}"
+      CRS_AGENT: opencode

@@ -1,0 +1,7 @@
+{
+  "llm_host": "http://127.0.0.1:4000",
+  "models": ["claude-opus-4-8"],
+  "crses": ["discver", "crs-bug-finding-claude-code"],
+  "benchmarks": ["sanity-mock-c-delta-01"],
+  "storage": "results"
+}
